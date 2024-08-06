@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="<link to your pfp>" type="image/x-icon" />
+  <meta property="og:title" content="{NAME}">
+  <meta property="og:description" content="Check out {NAME}'s Links Page.">
+  <meta property="og:image" content="https://pbs.twimg.com/profile_images/1677511665729032194/Frc8GSs9_400x400.jpg">
+  <title>{NAME}</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 5px 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: linear-gradient(101.07deg, #2e3c87 7.93%, #6a1094 93.3%);
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  margin: auto;
+  width: 500px;
+  height: calc(100vh - 20px);
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container .profile {
+  width: 104px;
+  margin-bottom: 20px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 99;
+}
+
+.container h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.container .subtitle {
+  font-size: 14px;
+  color: #e3e3e3;
+}
+
+.social-media-container {
+  display: flex;
+  height: 65px;
+  width: 223px;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(224, 224, 224, 0.35);
+  border-radius: 50px;
+  position: absolute;
+  top: -32px;
+  left: calc(50% - 111px);
+}
+
+.social-media-container a {
+  background: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-container svg {
+  color: #9d46c6;
+}
+
+.info-container {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px 50px 0 0;
+  position: relative;
+  margin-top: 40px;
+}
+
+.content {
+  padding: 50px 30px 20px;
+  width: 100%;
+  color: #43085f;
+  overflow: hidden;
+  position: relative;
+}
+
+.secondary-content {
+  visibility: hidden;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 100%;
+  top: 50px;
+  z-index: 2;
+  padding: 0 30px;
+}
+
+.secondary-content h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.secondary-content h3 svg {
+  margin-right: 10px;
+}
+
+.secondary-content.show {
+  animation: content-show 0.5s forwards;
+}
+
+.secondary-content.hide {
+  animation: content-hide 0.5s forwards;
+}
+
+@keyframes content-show {
+  0% {
+    left: 100%;
+    visibility: hidden;
+  }
+  100% {
+    left: 0;
+    visibility: visible;
+  }
+}
+
+@keyframes content-hide {
+  0% {
+    left: 0;
+    visibility: visible;
+  }
+  100% {
+    left: 100%;
+    visibility: hidden;
+  }
+}
+
+.video-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  border-radius: 16px;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.link {
+  margin: 15px auto;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bcbcbc;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #43085f;
+  cursor: pointer;
+  -webkit-box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
+  -moz-box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
+  box-shadow: 4px 4px 18px -5px rgba(179, 179, 179, 0.72);
+}
+
+.link.highlight {
+  background: #b366d8;
+  border: 1px solid #b366d8;
+  color: #fff;
+  font-weight: bold;
+}
+
+  </style>
+
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="container">
+    <img class="profile" src="<link to your pfp>" />
+    <h2>{NAME}</h2>
+    <p class="subtitle">{PROFESSION}</p>
+    <p>{DESCRIPTION}</p>
+
+    <div class="info-container">
+      <div class="social-media-container">
+        <a href="mailto:{EMAIL}"><i data-feather="send"></i></a>
+      </div>
+      <div class="content">
+        <div class="main-content">
+          <a href="https://twitter.com/{TWITTER}" class="link highlight">
+            🐓 Twitter
+          </a>
+          <a class="link" href="">
+            🔗 My Website
+          </a>
+          <a class="link" href="">
+            + Add more items right here!
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+  feather.replace();
+</script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: {
+        value: 1200,
+        density: {
+          enable: true,
+          value_area: 789.1476416322727
+        }
+      },
+      color: {
+        value: "#ffffff"
+      },
+      shape: {
+        type: "circle",
+        stroke: {
+          width: 0,
+          color: "#000000"
+        },
+        polygon: {
+          nb_sides: 5
+        },
+        image: {
+          src: "img/github.svg",
+          width: 100,
+          height: 100
+        }
+      },
+      opacity: {
+        value: 0.48927153781200905,
+        random: false,
+        anim: {
+          enable: true,
+          speed: 0.2,
+          opacity_min: 0,
+          sync: false
+        }
+      },
+      size: {
+        value: 2,
+        random: true,
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 0,
+          sync: false
+        }
+      },
+      line_linked: {
+        enable: false,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200
+        }
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: true,
+          mode: "bubble"
+        },
+        onclick: {
+          enable: true,
+          mode: "push"
+        },
+        resize: true
+      },
+      modes: {
+        grab: {
+          distance: 400,
+          line_linked: {
+            opacity: 1
+          }
+        },
+        bubble: {
+          distance: 83.91608391608392,
+          size: 1,
+          duration: 3,
+          opacity: 1,
+          speed: 3
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4
+        },
+        push: {
+          particles_nb: 4
+        },
+        remove: {
+          particles_nb: 2
+        }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+<script>
+  const setupButton = document.getElementById("setup-button");
+  const goBackButton = document.getElementById("go-back-button");
+  setupButton.addEventListener("click", showContent);
+  goBackButton.addEventListener("click", hideContent);
+
+  function showContent() {
+    document.getElementById("secondary-content").classList.remove("hide");
+    document.getElementById("secondary-content").classList.add("show");
+  }
+
+  function hideContent() {
+    document.getElementById("secondary-content").classList.remove("show");
+    document.getElementById("secondary-content").classList.add("hide");
+  }
+</script>
+
+</html>
